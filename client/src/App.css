@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Literata:wght@500&family=PT+Serif:wght@700&family=Roboto&display=swap');
+
+body {
+    background-color: #fcf9cd;
+    background-image: url("/src/assets/background.png");
+}
+
+.head-para {
+    margin-left: 0;
+    text-align: justify;
+}
+
+.col {
+    padding: 0;
+}
+
+.loader {
+    margin-top: 10rem !important;
+}
+
+.navbar-link {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000 !important;
+}
+
+.navbar-link:hover {
+    color: #544179 !important;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+}
