@@ -87,12 +87,33 @@ const Heading = Styled.h1`
     margin-bottom: 20px;
     font-family: 'PT Serif', serif;
     font-size: 3.5rem;
+
+    @media (max-width: 767px) {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 450px) {
+        text-align: center;
+        font-size: 2.7rem;
+        margin-top: 20px;
+    }
 `;
 
 const InfoPara = Styled.p`
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
     width: 100%;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 1.1rem;
+    }
+
 `;
 
 //Weather Condition

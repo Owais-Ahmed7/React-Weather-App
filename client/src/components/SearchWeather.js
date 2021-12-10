@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col'
 import "../App.css";
 import Styled from "styled-components";
 import axios from "axios";
@@ -84,10 +86,19 @@ export default function SearchWeather() {
 
       <Container>
 
+
         <WeatherForm onSubmit={onSubmit} >
-           <CountryInput onChange={countryName} value={location.countryName} name="countryName" placeholder="Country Name" />
-           <CityInput onChange={cityName} value={location.cityName} name="cityName" placeholder="City Name"  />
-           <SubmitButton type="submit" >Search Weather</SubmitButton>
+          <Row className="search-row">
+            <Col className="button-col" lg="4" md="6" sm="12">
+               <CountryInput onChange={countryName} value={location.countryName} name="countryName" placeholder="Country Name" />
+            </Col>
+            <Col className="button-col" lg="4" md="6" sm="12">             
+               <CityInput onChange={cityName} value={location.cityName} name="cityName" placeholder="City Name"  />
+            </Col>
+            <Col className="button-col" lg="4" md="6" sm="12">  
+                <SubmitButton type="submit" >Search Weather</SubmitButton>
+            </Col>
+          </Row>
         </WeatherForm>
 
  
@@ -125,22 +136,36 @@ const Container = Styled.div`
 //weather form 
 
 const WeatherForm = Styled.form`
-    display: flex;   
+    text-align: center;
     justify-content: center;
-    align-items: center
 `;
 
 const CountryInput = Styled.input`
     height: 2.8rem;
     width: 300px;
     text-align: center;
+
+    @media(max-width: 360px) {
+      width: 250px;
+    }
+
+    @media(max-width: 300px) {
+      width: 200px;
+    }
 `;
 
 const CityInput = Styled.input`
-    margin: 0 3rem 0 3rem;
     height: 2.8rem;
     width: 300px;
     text-align: center;
+
+    @media(max-width: 360px) {
+      width: 250px;
+    }
+
+    @media(max-width: 300px) {
+      width: 200px !important;
+    }
 `;
 
 const SubmitButton = Styled.button`
@@ -158,6 +183,10 @@ const SubmitButton = Styled.button`
         opacity: 1;
         color: #000
         transition-duration: 5s;
+    }
+
+    @media(max-width: 270px) {
+      width: 150px !important;
     }
 `;
 
